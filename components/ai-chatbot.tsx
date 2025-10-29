@@ -9,18 +9,19 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Bot, Send, User, Sparkles, Loader2 } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { sendMessageToAI } from "@/lib/ai-service"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const starterPrompts = [
-  "Chủ nghĩa tư bản là gì? Tại sao nó quan trọng với giới trẻ?",
-  "Mâu thuẫn cơ bản của chủ nghĩa tư bản là gì?",
-  "AI có thể bóc lột lao động không? Làm sao để tránh?",
-  "Đổi mới 1986 ở Việt Nam có ý nghĩa gì với CNDVLS?",
-  "Làm sao để có ý thức lịch sử trong thời đại AI?",
-  "Tư bản số là gì? Nó khác gì với tư bản truyền thống?",
-  "Sinh viên nên làm gì để vượt qua những mâu thuẫn của tư bản?",
-  "Triết học giúp gì cho lập trình viên và kỹ sư AI?",
+  "Quan điểm C. Mác về vai trò lịch sử của CNTB là gì?",
+  "5 đặc trưng giai đoạn đế quốc theo Lênin?",
+  "Tesla minh chứng CNTB thế kỷ 21 như thế nào?",
+  "Kinh tế nền tảng Việt Nam có tính hai mặt gì?",
+  "Sinh viên cần core competencies nào?",
+  "Làm sao tránh trở thành nạn nhân của hệ thống?",
+  "Xây dựng xã hội tiến bộ hơn như thế nào?",
+  "Mâu thuẫn cơ bản của CNTB trong thời đại số?",
 ]
 
 interface Message {
@@ -44,7 +45,7 @@ export function AIChatbot() {
       id: "1",
       role: "assistant",
       content:
-        'Xin chào! Tôi là "Triết Sống - CNDVLS", trợ lý AI chuyên về Chủ nghĩa Duy vật Lịch sử. Tôi sẽ giúp bạn kết nối triết học với lịch sử Việt Nam, công nghệ AI, và cuộc sống hiện đại. Bạn muốn hỏi gì?',
+        'Xin chào! Tôi là trợ lý AI chuyên về Kinh tế chính trị Mác - Lênin. Tôi có thể giúp bạn hiểu về vai trò lịch sử của chủ nghĩa tư bản, phân tích Tesla và kinh tế nền tảng, cũng như hướng dẫn sinh viên trong thời đại số. Bạn muốn hỏi gì?',
     },
   ])
   const [input, setInput] = useState("")
@@ -118,26 +119,18 @@ export function AIChatbot() {
     setIsLoading(true)
 
     try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          messages: messages.map((m) => ({ role: m.role, content: m.content })),
-        }),
-      })
-
-      if (!response.ok) throw new Error("Failed to get response")
-
-      const data = await response.json()
+      // Gọi Groq API thông qua AI service
+      const aiResponse = await sendMessageToAI(input, messages)
+      
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: data.content,
+        content: aiResponse,
       }
 
       setMessages((prev) => [...prev, assistantMessage])
     } catch (error) {
-      console.error("[v0] Chat error:", error)
+      console.error("Groq Chat error:", error)
       const errorMessage: Message = {
         id: (Date.now() + 2).toString(),
         role: "assistant",
@@ -156,17 +149,17 @@ export function AIChatbot() {
       <div className="container max-w-[80rem] mx-auto px-4 relative z-10">
         <div ref={titleRef} className="mx-auto max-w-[58rem] text-center mb-12">
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
-            Tư vấn AI về triết học
+            AI Trợ lý Mác - Lênin
           </h2>
           <p className="mt-4 text-lg text-gray-200">
-            Đặt câu hỏi về chủ nghĩa duy vật lịch sử, tư bản, và AI trong thời đại số
+            Hỏi đáp về vai trò lịch sử của chủ nghĩa tư bản, Tesla, kinh tế nền tảng và hướng dẫn sinh viên
           </p>
         </div>
 
         <Card ref={cardRef} className="w-full max-w-[58rem] mx-auto bg-card/70">
           <CardHeader>
-            <CardTitle>Trò chuyện với AI Triết Sống</CardTitle>
-            <CardDescription>Hỏi đáp về CNDVLS, lịch sử Việt Nam, và ứng dụng vào thời đại AI</CardDescription>
+            <CardTitle>AI Chuyên gia Kinh tế chính trị Mác - Lênin</CardTitle>
+            <CardDescription>Hỏi đáp về quan điểm Marx-Lenin, ví dụ Tesla, kinh tế nền tảng, và hướng dẫn sinh viên thời đại số</CardDescription>
           </CardHeader>
           <CardContent>
             <ScrollArea ref={scrollAreaRef} className="h-[600px] pr-4 mb-4">

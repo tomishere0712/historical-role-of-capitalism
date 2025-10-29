@@ -8,6 +8,7 @@ import { InteractiveTimeline } from "@/components/interactive-timeline"
 import { PhilosophyMatrix } from "@/components/philosophy-matrix"
 import { YouthPerspective } from "@/components/youth-perspective"
 import { AIChatbot } from "@/components/ai-chatbot"
+import { FloatingChatbot } from "@/components/floating-chatbot"
 import { PhilosophyQuiz } from "@/components/philosophy-quiz"
 import { OpinionsSection } from "@/components/opinions-section"
 import { FAQSection } from "@/components/faq-section"
@@ -103,19 +104,22 @@ export default function Home() {
         <YouthPerspective />
       </div>
 
-      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      <AIChatbot />
+      {/* <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <AIChatbot /> */}
 
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <PhilosophyQuiz />
 
-      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      <OpinionsSection />
+      {/* <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <OpinionsSection /> */}
 
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <FAQSection />
 
       <Footer />
+      
+      {/* Floating AI Chatbot - Fixed position */}
+      <FloatingChatbot />
     </main>
   )
 }

@@ -15,8 +15,8 @@ export function Header() {
     { id: "timeline", label: "Dòng Chảy", icon: Clock, href: "#timeline" },
     { id: "matrix", label: "Ma Trận", icon: Grid3x3, href: "#matrix" },
     { id: "quiz", label: "Kiểm Tra", icon: Brain, href: "#quiz" },
-    { id: "chat", label: "Chat AI", icon: MessageSquare, href: "#chat" },
-    { id: "opinions", label: "Góp Ý", icon: Users, href: "#opinions" },
+    // { id: "chat", label: "Chat AI", icon: MessageSquare, href: "#chat" },
+    // { id: "opinions", label: "Góp Ý", icon: Users, href: "#opinions" },
   ]
 
   useEffect(() => {
