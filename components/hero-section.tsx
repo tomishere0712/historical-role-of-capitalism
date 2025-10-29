@@ -118,10 +118,10 @@ export function HeroSection() {
         >
           <div className="flex flex-col items-center gap-2 sm:gap-4">
             <span className="text-white/90 drop-shadow-2xl inline-block translate-y-8 sm:translate-y-12">
-              TỪ CÁCH MẠNG
+              CẠNH TRANH VÀ ĐỘC QUYỀN 
             </span>
             <span className="text-white/90 drop-shadow-2xl inline-block translate-y-4 sm:translate-y-8">
-              CÔNG NGHIỆP ĐẾN AI
+              TRONG NỀN KINH TẾ THỊ TRƯỜNG
             </span>
           </div>
         </h1>
