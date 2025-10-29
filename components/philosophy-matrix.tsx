@@ -63,7 +63,7 @@ const sectionStyle: React.CSSProperties = {
 
 // Màu chữ chính
 const primaryTextColor = "#FFF0B4"
-const secondaryTextColor = "#C0C0C0"
+const secondaryTextColor = "#ffffffff"
 
 export function PhilosophyMatrix() {
   const sectionRef = useRef<HTMLElement>(null)
