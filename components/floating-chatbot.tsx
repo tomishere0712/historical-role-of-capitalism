@@ -115,7 +115,7 @@ Bạn muốn hỏi về điều gì?`
 
       {/* Floating Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-12 right-6 z-50 w-96  max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)]">
+        <div className="fixed bottom-12 right-6 z-50 w-96 h-[600px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)]">
           <div className="rounded-xl h-full bg-white shadow-2xl border-red-800/20">
             {/* Header */}
             <CardHeader className="pt-3 pb-3 bg-gradient-to-r from-red-800 to-red-900 text-white rounded-t-lg">
