@@ -151,11 +151,13 @@ export function YouthPerspective() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={titleRef} className="text-center space-y-6 mb-8">
-          <h2 className="text-5xl md:text-7xl font-black italic text-white/90 tracking-tight">TRIẾT HỌC TƯ BẢN 4.0</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black italic text-white/90 tracking-tight px-4">
+            CẠNH TRANH VÀ ĐỘC QUYỀN<br />TRONG NỀN KINH TẾ THỊ TRƯỜNG
+          </h2>
 
           <div className="relative inline-block">
-            <div className="relative px-12 py-6 bg-red-900/80 border-4 border-yellow-500" ref={youthPerspectiveBoxRef}>
-              <h3 className="text-4xl md:text-6xl font-black text-yellow-400 tracking-wide">
+            <div className="relative px-6 sm:px-8 md:px-12 py-4 md:py-6 bg-red-900/80 border-4 border-yellow-500" ref={youthPerspectiveBoxRef}>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-yellow-400 tracking-wide">
                 HƯỚNG TỚI
                 <br />
                 XÃ HỘI TIẾN BỘ

@@ -96,7 +96,7 @@ export function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-24 overflow-hidden bg-black"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16 overflow-hidden bg-black"
     >
       <div 
         ref={backgroundRef} 
@@ -114,14 +114,14 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto text-center space-y-8 my-auto">
         <h1
           ref={titleRef}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-balance leading-none tracking-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-balance leading-tight tracking-tight px-4 max-w-5xl mx-auto"
           style={{ fontStyle: "italic" }}
         >
-          <div className="flex flex-col items-center gap-2 sm:gap-4">
-            <span className="text-white/90 drop-shadow-2xl inline-block translate-y-8 sm:translate-y-12">
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-white/90 drop-shadow-2xl">
               CẠNH TRANH VÀ ĐỘC QUYỀN 
             </span>
-            <span className="text-white/90 drop-shadow-2xl inline-block translate-y-4 sm:translate-y-8">
+            <span className="text-white/90 drop-shadow-2xl">
               TRONG NỀN KINH TẾ THỊ TRƯỜNG
             </span>
           </div>
