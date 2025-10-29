@@ -61,9 +61,8 @@ const sectionStyle: React.CSSProperties = {
   zIndex: 0,
 }
 
-// Màu chữ chính
 const primaryTextColor = "#FFF0B4"
-const secondaryTextColor = "#ffffffff"
+const secondaryTextColor = "#C0C0C0"
 
 export function PhilosophyMatrix() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -106,7 +105,7 @@ export function PhilosophyMatrix() {
   }, [])
 
   return (
-    <section id="matrix" className="py-20 px-4 relative" ref={sectionRef} style={sectionStyle}>
+    <section id="matrix" className="py-16 px-4 relative" ref={sectionRef} style={sectionStyle}>
       <div className="absolute inset-0 bg-black/30 z-0"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">

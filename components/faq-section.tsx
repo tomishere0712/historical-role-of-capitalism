@@ -9,34 +9,54 @@ gsap.registerPlugin(ScrollTrigger)
 
 const faqs = [
   {
-    question: "Chủ nghĩa Duy vật Lịch sử là gì?",
+    question: "Vai trò lịch sử của chủ nghĩa tư bản là gì theo Mác và Lênin?",
     answer:
-      "Chủ nghĩa Duy vật Lịch sử (CNDVLS) là học thuyết triết học của C.Mác và Ph.Ăngghen về sự phát triển của xã hội loài người. Nó khẳng định rằng sự phát triển xã hội được quyết định bởi các điều kiện vật chất, đặc biệt là phương thức sản xuất (lực lượng sản xuất + quan hệ sản xuất).",
+      "Theo Mác và Lênin, CNTB có vai trò tiến bộ to lớn: phá vỡ phong kiến, giải phóng lực lượng sản xuất, cách mạng hóa công cụ sản xuất, tạo tiền đề vật chất – kỹ thuật cho xã hội. Tuy nhiên, CNTB cũng chứa đựng mâu thuẫn nội tại (giữa tính xã hội hóa sản xuất và chiếm hữu tư nhân) dẫn đến khủng hoảng chu kỳ, bất bình đẳng, cần được vượt qua để phát triển tiếp.",
   },
   {
-    question: "Tại sao cần học triết học trong thời đại AI?",
+    question: "Tại sao Tesla là ví dụ điển hình cho vai trò thúc đẩy lực lượng sản xuất của CNTB?",
     answer:
-      "Triết học giúp chúng ta hiểu bản chất của sự vật, tư duy hệ thống và phản biện. Trong thời đại AI với thông tin quá tải, khả năng phân tích bản chất, nhận diện xu hướng và đưa ra quyết định đúng đắn trở nên quan trọng hơn bao giờ hết. Triết học cũng giúp giữ vững giá trị nhân văn khi công nghệ phát triển.",
+      "Tesla minh chứng quy luật 'cạnh tranh → tích lũy tư bản → đổi mới công nghệ' của Mác: phát triển xe điện, pin tiên tiến, tự động hóa sản xuất (Gigafactory), AI tự lái. Cạnh tranh buộc Tesla đầu tư khổng lồ vào R&D, thúc đẩy chuyển dịch năng lượng sạch toàn cầu. Đây là vai trò cách mạng hóa công cụ sản xuất trong thế kỷ 21.",
   },
   {
-    question: "Làm thế nào để áp dụng CNDVLS vào cuộc sống?",
+    question: "Kinh tế nền tảng (Grab, Shopee Food) vừa là động lực vừa chứa mâu thuẫn như thế nào?",
     answer:
-      "Bạn có thể áp dụng CNDVLS bằng cách: (1) Phân tích vấn đề từ điều kiện vật chất cụ thể, không chỉ dựa vào ý thức; (2) Nhìn nhận sự phát triển theo quy luật biện chứng (tích lũy dần dần, bước nhảy vọt); (3) Hiểu rằng thay đổi là tất yếu và cần thích nghi; (4) Nhận thức vai trò của cộng đồng trong sự phát triển cá nhân.",
+      "Động lực: thuật toán tối ưu giao nhận, giảm chi phí giao dịch, tạo việc làm linh hoạt, mở rộng thị trường cho tiểu thương. Mâu thuẫn: thu nhập tài xế bấp bênh (thuật toán thay đổi), rủi ro do lao động gánh (xăng, khấu hao xe), dữ liệu/sự chú ý bị đo đếm tối ưu (tha hóa), hiệu ứng mạng tạo độc quyền. Đây là tính hai mặt điển hình của CNTB hiện đại.",
   },
   {
-    question: "Mối liên hệ giữa chiến công Việt Nam và triết học là gì?",
+    question: "5 đặc trưng của CNTB giai đoạn đế quốc theo Lênin là gì?",
     answer:
-      "Các chiến công của dân tộc Việt Nam là minh chứng sinh động cho các nguyên lý triết học CNDVLS: sức mạnh nhân dân (lực lượng sản xuất), tổ chức xã hội (quan hệ sản xuất), tích lũy lực lượng dẫn đến bước nhảy vọt (Điện Biên Phủ), và khả năng thích nghi với thực tiễn (Đổi mới).",
+      "(1) Tập trung sản xuất tạo độc quyền; (2) Tư bản ngân hàng + công nghiệp = tư bản tài chính; (3) Xuất khẩu tư bản trội hơn hàng hóa; (4) Liên minh độc quyền quốc tế phân chia thị trường; (5) Phân chia lãnh thổ thế giới giữa cường quốc. Các đặc trưng này thể hiện rõ trong ngành AI – cloud hiện nay (Google, Microsoft, Amazon).",
   },
   {
-    question: "AI có thay thế được con người không?",
+    question: "Sinh viên cần trang bị những năng lực lõi nào để tận dụng thành tựu CNTB?",
     answer:
-      "Theo quan điểm CNDVLS, AI là công cụ lao động mới - một phần của lực lượng sản xuất. AI có thể thay thế con người trong nhiều công việc, nhưng không thể thay thế hoàn toàn vì con người có ý thức, sáng tạo và giá trị nhân văn. Tương lai là sự kết hợp Human + AI, không phải AI thay thế Human.",
+      "(1) Tư duy phê phán: phân tích bản chất, không bị thao túng; (2) Năng lực số (Data/AI Literacy): làm chủ công cụ công nghệ; (3) Phương pháp nghiên cứu: phân tích dựa bằng chứng khoa học; (4) Ngoại ngữ: tiếp cận tri thức toàn cầu. Kết hợp mô hình T-shaped (chuyên sâu + kỹ năng bổ trợ) và học suốt đời để thích ứng với biến động.",
   },
   {
-    question: "Làm sao để chuẩn bị cho tương lai với AI?",
+    question: "Làm sao để sinh viên không trở thành 'nạn nhân' của hệ thống tư bản số?",
     answer:
-      "Hãy tập trung vào: (1) Tư duy phản biện và sáng tạo - điều AI khó làm được; (2) Học tập suốt đời để thích nghi với công nghệ mới; (3) Phát triển kỹ năng mềm và giá trị nhân văn; (4) Hiểu bản chất công nghệ để sử dụng đúng đắn; (5) Kết nối cộng đồng và hợp tác hiệu quả.",
+      "(1) Quyền kỹ thuật số: bảo mật dữ liệu cá nhân, quản lý dấu vết số, hiểu điều khoản nền tảng; (2) Lao động – tài chính: đọc kỹ hợp đồng, đa dạng hóa kỹ năng/thu nhập, dự phòng tài chính; (3) Vệ sinh số: quản trị thời gian màn hình, giảm lệ thuộc thuật toán khuyến nghị, giữ sức khỏe tinh thần. Phát triển tư duy phản biện để không bị dẫn dắt bởi mô hình kinh doanh nền tảng.",
+  },
+  {
+    question: "Tại sao cần chính sách công để điều tiết CNTB trong thời đại AI?",
+    answer:
+      "Mâu thuẫn giữa tính xã hội hóa cao (chuỗi cung ứng tri thức toàn cầu, AI, cloud) và chiếm hữu tư nhân (dữ liệu, thuật toán, nền tảng) không tự tiêu vong. Cần chính sách: chống độc quyền, bảo vệ dữ liệu cá nhân, an sinh xã hội, đào tạo lại lao động, định giá carbon, minh bạch thuật toán - để định hướng phát triển phù hợp với mức xã hội hóa hiện nay.",
+  },
+  {
+    question: "Hướng tới xã hội tiến bộ hơn có nghĩa là gì đối với sinh viên?",
+    answer:
+      "Không phải phủ nhận thành tựu CNTB mà vượt lên trên nó: (1) Học gắn với trách nhiệm xã hội (chọn nghề vừa có thu nhập vừa đóng góp cộng đồng); (2) Tinh thần công dân toàn cầu (chung tay giải quyết biến đổi khí hậu, công bằng công nghệ); (3) Đổi mới xã hội (social innovation) dùng công nghệ giải quyết vấn đề xã hội; (4) Ủng hộ khoa học mở, doanh nghiệp xã hội, đa dạng hóa sở hữu/quản trị.",
+  },
+  {
+    question: "Tại sao Cách mạng Tháng Tám 1945 thành công dù điều kiện vật chất lạc hậu?",
+    answer:
+      "Theo CNDVLS, ý thức xã hội có độc lập tương đối với điều kiện vật chất. Tháng Tám 1945: điều kiện vật chất còn lạc hậu nhưng ý thức độc lập dân tộc cao + tư tưởng Mác–Lênin + tổ chức chặt chẽ của Đảng → cách mạng thành công. Đây là minh chứng vai trò của ý thức có tổ chức trong việc vượt qua hạn chế vật chất.",
+  },
+  {
+    question: "Thế hệ 2025-2050 'chiến đấu cho tự do nhận thức' có nghĩa là gì?",
+    answer:
+      "Nếu thế hệ 1945–1986 chiến đấu cho độc lập vật chất (lãnh thổ, chính trị, kinh tế), thì thế hệ hiện tại chiến đấu cho tự do nhận thức: không để thuật toán, surveillance capitalism, fake news chi phối cách nghĩ và cách sống. Đây là mặt trận mới của đấu tranh - giữ gốc nhân văn, tư duy độc lập khi công nghệ bùng nổ.",
   },
 ]
 
@@ -46,7 +66,7 @@ export function FAQSection() {
   const accordionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (sectionRef.current && titleRef.current && accordionRef.current) {
+    if (sectionRef.current && titleRef.current) {
       const ctx = gsap.context(() => {
         gsap.from(titleRef.current, {
           scrollTrigger: {
@@ -58,18 +78,6 @@ export function FAQSection() {
           opacity: 0,
           y: 50,
           scale: 0.9,
-        })
-
-        gsap.from(accordionRef.current?.querySelectorAll("[data-state]") || [], {
-          scrollTrigger: {
-            trigger: accordionRef.current,
-            start: "top 80%",
-            end: "top 40%",
-            scrub: 1,
-          },
-          opacity: 0,
-          x: -50,
-          stagger: 0.1,
         })
       }, sectionRef)
 
@@ -89,7 +97,6 @@ export function FAQSection() {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                
                 <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
                 <AccordionContent className="text-base text-muted-foreground leading-relaxed">
                   {faq.answer}
