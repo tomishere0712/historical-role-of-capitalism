@@ -13,31 +13,31 @@ gsap.registerPlugin(ScrollTrigger)
 const perspectives = [
   {
     icon: Brain,
-    title: "Thế Hệ AI – Thế Hệ Phản Tư",
-    description: "Không chỉ tiêu thụ công nghệ mà còn định hướng cho công nghệ",
+    title: "Kế Thừa Giá Trị Tích Cực CNTB",
+    description: "Tận dụng tự do sáng tạo, hiệu quả tổ chức và khoa học công nghệ",
     example:
-      "Không chỉ dùng AI mà còn hiểu rõ những mâu thuẫn của tư bản trong thời đại AI. Tư duy phản biện và ý thức lịch sử là chìa khóa.",
+      "Không phủ nhận thành tựu CNTB (AI, năng lượng xanh, kinh tế số) mà chuyển hóa chúng thành động lực xây dựng xã hội phát triển toàn diện con người - không để lợi nhuận thuần túy chi phối đạo đức, giáo dục và môi trường.",
   },
   {
     icon: Target,
-    title: "Chiến Đấu Cho Tự Do Nhận Thức",
-    description: "Tránh để thuật toán và tư bản chi phối cách nghĩ, cách sống",
+    title: "Học Tập Gắn Trách Nhiệm Xã Hội",
+    description: "Chọn nghề vừa có thu nhập, vừa mang giá trị cho cộng đồng",
     example:
-      "Nếu thế hệ 1945–1986 chiến đấu để giành độc lập vật chất, thì thế hệ 2025–2050 đang chiến đấu để giành tự do nhận thức khỏi sự chi phối của tư bản số.",
+      "Sinh viên không chỉ là 'người thụ hưởng' công nghệ mà là chủ thể kiến tạo tương lai. Chọn nghề nghiệp không chỉ vì thu nhập, mà còn vì đóng góp giải quyết vấn đề xã hội (giáo dục, y tế, công nghệ xanh, an sinh số).",
   },
   {
     icon: BookOpen,
-    title: "Triết Học Là Công Cụ Soi Chiếu",
-    description: "Không xa rời đời sống, mà là công cụ soi chiếu những mâu thuẫn của tư bản",
+    title: "Tinh Thần Công Dân Toàn Cầu",
+    description: "Chung tay giải quyết biến đổi khí hậu, công bằng xã hội, an ninh số",
     example:
-      "Chủ nghĩa tư bản là tấm gương: nó phản chiếu những mâu thuẫn nội tại của hệ thống. Hiểu rõ những mâu thuẫn này để tìm ra giải pháp tiến bộ.",
+      "Phát triển global citizenship: hiểu biết, tôn trọng sự khác biệt văn hóa, nhận thức các vấn đề toàn cầu (climate change, tech justice, cybersecurity) và hợp tác quốc tế - vượt lên lợi ích tư bản hẹp.",
   },
   {
     icon: Sparkles,
-    title: "Ý Thức Lịch Sử Là La Bàn",
-    description: "Giúp định hướng trong biển dữ liệu, giữ gốc nhân văn",
+    title: "Người – Công Nghệ – Xã Hội Hài Hòa",
+    description: "Lấy con người làm trung tâm, công nghệ phục vụ hạnh phúc",
     example:
-      "Ý thức lịch sử là la bàn: giúp định hướng trong biển dữ liệu, giữ gốc nhân văn khi công nghệ bùng nổ. Chủ nghĩa tư bản không phải điểm cuối cùng.",
+      "Lý tưởng là vượt lên CNTB: xây dựng mô hình lấy con người làm trung tâm (công nghệ phục vụ hạnh phúc, không chi phối), kinh tế gắn đạo đức và bền vững, xã hội tri thức mang tinh thần nhân văn.",
   },
 ]
 
@@ -166,30 +166,32 @@ export function YouthPerspective() {
   }, [])
 
   return (
-    <section id="youth" className="relative py-32 px-4 overflow-hidden" style={sectionStyle} ref={sectionRef}>
+    <section id="youth" className="relative py-16 px-4 overflow-hidden" style={sectionStyle} ref={sectionRef}>
       <div className="absolute inset-0 bg-red-900/80 z-0 mix-blend-multiply" />
       <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={titleRef} className="text-center space-y-6 mb-8">
-          <h2 className="text-5xl md:text-7xl font-black italic text-white/90 tracking-tight">TRIẾT HỌC TƯ BẢN 4.0</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black italic text-white/90 tracking-tight px-4">
+            CẠNH TRANH VÀ ĐỘC QUYỀN<br />TRONG NỀN KINH TẾ THỊ TRƯỜNG
+          </h2>
 
           <div className="relative inline-block">
-            <div className="relative px-12 py-6 bg-red-900/80 border-4 border-yellow-500" ref={youthPerspectiveBoxRef}>
-              <h3 className="text-4xl md:text-6xl font-black text-yellow-400 tracking-wide">
-                GÓC NHÌN GIỚI TRẺ
+            <div className="relative px-6 sm:px-8 md:px-12 py-4 md:py-6 bg-red-900/80 border-4 border-yellow-500" ref={youthPerspectiveBoxRef}>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-yellow-400 tracking-wide">
+                HƯỚNG TỚI
                 <br />
-                TRONG THỜI ĐẠI AI
+                XÃ HỘI TIẾN BỘ
               </h3>
             </div>
           </div>
 
           <p className="text-xl md:text-2xl text-cyan-400 max-w-3xl mx-auto font-medium">
-            Khám phá vai trò lịch sử của chủ nghĩa tư bản và những mâu thuẫn của nó trong kỷ nguyên trí tuệ nhân tạo
+            Sinh viên thế hệ mới không phủ nhận CNTB mà vượt lên trên nó - xây dựng xã hội công bằng, nhân văn, bền vững
           </p>
 
           <p className="text-lg md:text-xl font-semibold text-yellow-300 max-w-2xl mx-auto italic mt-4">
-            "Chúng ta không sợ tư bản thay thế mình – chỉ sợ mình không hiểu rõ những mâu thuẫn của nó."
+            "Sử dụng thành tựu của tư bản như một công cụ, chứ không để nó trở thành mục tiêu."
           </p>
         </div>
 
@@ -247,26 +249,25 @@ export function YouthPerspective() {
           <Card className="bg-gradient-to-r from-red-900 to-red-800 text-white border-2 border-yellow-500/50 shadow-2xl">
             <CardHeader>
               <CardTitle className="text-2xl md:text-3xl text-yellow-400 font-bold">
-                Thời đại AI cần những người trẻ có ý thức lịch sử và ý thức về những mâu thuẫn của tư bản
+                Thế hệ sinh viên AI - Chủ thể kiến tạo tương lai, không chỉ là người thụ hưởng
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-gray-100">
               <p className="leading-relaxed">
-                <strong className="text-yellow-400">Triết học không xa rời đời sống:</strong> Mà là công cụ soi chiếu
-                những mâu thuẫn của tư bản. Giúp bạn hiểu rõ bản chất của sự vật, không bị lạc lối trong thông tin quá
-                tải.
+                <strong className="text-yellow-400">Kế thừa, không sao chép:</strong> Tận dụng tự do sáng tạo, hiệu quả tổ chức, khoa học-công nghệ của CNTB. Nhưng chuyển hóa chúng để phát triển toàn diện con người, không để lợi nhuận chi phối đạo đức và môi trường.
               </p>
               <p className="leading-relaxed">
-                <strong className="text-yellow-400">Chủ nghĩa tư bản là tấm gương:</strong> Nó phản chiếu những mâu
-                thuẫn nội tại của hệ thống. Cách chúng ta đối mặt với những mâu thuẫn này sẽ quyết định tương lai.
+                <strong className="text-yellow-400">Trách nhiệm xã hội:</strong> Học tập gắn với đóng góp cộng đồng. Chọn nghề vừa có thu nhập vừa giải quyết vấn đề xã hội. Tham gia đổi mới xã hội (social innovation) - dùng công nghệ cho mục tiêu bền vững.
               </p>
               <p className="leading-relaxed">
-                <strong className="text-yellow-400">Ý thức lịch sử là la bàn:</strong> Giúp định hướng trong biển dữ
-                liệu, giữ gốc nhân văn khi công nghệ bùng nổ. Tư duy biện chứng giúp bạn thích nghi với thay đổi.
+                <strong className="text-yellow-400">Công dân toàn cầu:</strong> Hiểu biết, tôn trọng sự khác biệt. Chung tay giải quyết biến đổi khí hậu, công bằng xã hội, an ninh thông tin. Vượt lên lợi ích tư bản hẹp để hợp tác quốc tế.
+              </p>
+              <p className="leading-relaxed">
+                <strong className="text-yellow-400">Mô hình hài hòa:</strong> Xây dựng tương lai lấy con người làm trung tâm (công nghệ phục vụ hạnh phúc, không chi phối). Kinh tế gắn đạo đức và bền vững. Xã hội tri thức mang tinh thần nhân văn.
               </p>
               <div className="mt-6 p-6 bg-yellow-500/10 rounded-lg backdrop-blur-sm border-2 border-yellow-500/30">
                 <p className="text-xl font-bold text-yellow-300 text-center">
-                  "Thế hệ trước chiến đấu để giành độc lập vật chất – chúng ta chiến đấu để giành tự do nhận thức."
+                  "Lý tưởng xã hội tiến bộ được hình thành từng ngày qua hành động có ý thức, học tập nghiêm túc và trách nhiệm xã hội của thế hệ trẻ."
                 </p>
               </div>
             </CardContent>

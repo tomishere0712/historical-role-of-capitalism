@@ -61,9 +61,9 @@ const sectionStyle: React.CSSProperties = {
   zIndex: 0,
 }
 
-// Màu chữ chính
-const primaryTextColor = "#FFF0B4"
-const secondaryTextColor = "#ffffffff"
+const primaryTextColor = "#FFFFFF"
+const secondaryTextColor = "#E0E0E0"
+const textShadow = "2px 2px 4px rgba(0, 0, 0, 0.8)"
 
 export function PhilosophyMatrix() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -106,15 +106,15 @@ export function PhilosophyMatrix() {
   }, [])
 
   return (
-    <section id="matrix" className="py-20 px-4 relative" ref={sectionRef} style={sectionStyle}>
-      <div className="absolute inset-0 bg-black/30 z-0"></div>
+    <section id="matrix" className="py-16 px-4 relative" ref={sectionRef} style={sectionStyle}>
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={titleRef} className="text-center space-y-4 mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold" style={{ color: primaryTextColor }}>
+          <h2 className="text-4xl md:text-5xl font-bold" style={{ color: primaryTextColor, textShadow }}>
             Ma Trận Kết Nối
           </h2>
-          <p className="text-xl max-w-3xl mx-auto" style={{ color: secondaryTextColor }}>
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: secondaryTextColor, textShadow }}>
             Chủ Nghĩa Tư Bản ↔ Lý Thuyết ↔ Giới Trẻ ↔ Bài Học AI
           </p>
         </div>
@@ -141,28 +141,28 @@ export function PhilosophyMatrix() {
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-white/10">
+                  <tr className="bg-black/80">
                     <th
                       className="p-4 text-left font-semibold border border-gray-700"
-                      style={{ color: primaryTextColor }}
+                      style={{ color: primaryTextColor, textShadow }}
                     >
                       Khía Cạnh
                     </th>
                     <th
                       className="p-4 text-left font-semibold border border-gray-700"
-                      style={{ color: primaryTextColor }}
+                      style={{ color: primaryTextColor, textShadow }}
                     >
                       Sự Kiện Lịch Sử
                     </th>
                     <th
                       className="p-4 text-left font-semibold border border-gray-700"
-                      style={{ color: primaryTextColor }}
+                      style={{ color: primaryTextColor, textShadow }}
                     >
                       Góc Nhìn Giới Trẻ
                     </th>
                     <th
                       className="p-4 text-left font-semibold border border-gray-700"
-                      style={{ color: primaryTextColor }}
+                      style={{ color: primaryTextColor, textShadow }}
                     >
                       Bài Học Thời AI
                     </th>
@@ -170,17 +170,17 @@ export function PhilosophyMatrix() {
                 </thead>
                 <tbody>
                   {matrixData.map((row, index) => (
-                    <tr key={index} className="bg-black/40 hover:bg-black/60 transition-colors">
-                      <td className="p-4 border border-gray-700 font-medium" style={{ color: primaryTextColor }}>
+                    <tr key={index} className="bg-black/70 hover:bg-black/85 transition-colors">
+                      <td className="p-4 border border-gray-700 font-medium" style={{ color: primaryTextColor, textShadow }}>
                         {row.category}
                       </td>
-                      <td className="p-4 border border-gray-700" style={{ color: secondaryTextColor }}>
+                      <td className="p-4 border border-gray-700" style={{ color: secondaryTextColor, textShadow }}>
                         {row.achievement}
                       </td>
-                      <td className="p-4 border border-gray-700" style={{ color: secondaryTextColor }}>
+                      <td className="p-4 border border-gray-700" style={{ color: secondaryTextColor, textShadow }}>
                         {row.youth}
                       </td>
-                      <td className="p-4 border border-gray-700" style={{ color: secondaryTextColor }}>
+                      <td className="p-4 border border-gray-700" style={{ color: secondaryTextColor, textShadow }}>
                         {row.ai}
                       </td>
                     </tr>
@@ -195,10 +195,10 @@ export function PhilosophyMatrix() {
               {matrixData.map((item, index) => (
                 <Card
                   key={index}
-                  className="matrix-card bg-black/60 border border-gray-700 hover:shadow-2xl transition-shadow"
+                  className="matrix-card bg-black/80 border border-gray-600 hover:shadow-2xl transition-shadow"
                 >
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2" style={{ color: primaryTextColor }}>
+                    <CardTitle className="flex items-center gap-2" style={{ color: primaryTextColor, textShadow }}>
                       <span className="flex-shrink-0 w-8 h-8 rounded-full bg-yellow-500 text-black flex items-center justify-center text-sm font-bold">
                         {index + 1}
                       </span>
@@ -210,10 +210,10 @@ export function PhilosophyMatrix() {
                       <Badge variant="outline" className="mb-2 border-yellow-500 text-yellow-400 bg-transparent">
                         Sự Kiện
                       </Badge>
-                      <p className="text-sm font-medium" style={{ color: primaryTextColor }}>
+                      <p className="text-sm font-medium" style={{ color: primaryTextColor, textShadow }}>
                         {item.achievement}
                       </p>
-                      <p className="text-sm mt-1" style={{ color: secondaryTextColor }}>
+                      <p className="text-sm mt-1" style={{ color: secondaryTextColor, textShadow }}>
                         {item.philosophy}
                       </p>
                     </div>
@@ -221,7 +221,7 @@ export function PhilosophyMatrix() {
                       <Badge variant="outline" className="mb-2 border-yellow-500 text-yellow-400 bg-transparent">
                         Giới Trẻ
                       </Badge>
-                      <p className="text-sm" style={{ color: secondaryTextColor }}>
+                      <p className="text-sm" style={{ color: secondaryTextColor, textShadow }}>
                         {item.youth}
                       </p>
                     </div>
@@ -229,7 +229,7 @@ export function PhilosophyMatrix() {
                       <Badge variant="outline" className="mb-2 border-cyan-500 text-cyan-400 bg-transparent">
                         Bài Học AI
                       </Badge>
-                      <p className="text-sm" style={{ color: secondaryTextColor }}>
+                      <p className="text-sm" style={{ color: secondaryTextColor, textShadow }}>
                         {item.ai}
                       </p>
                     </div>

@@ -96,37 +96,38 @@ export function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 pb-24 overflow-hidden bg-black"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16 overflow-hidden bg-black"
     >
-      <div ref={backgroundRef} className="absolute inset-0 w-full h-full">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/capitalism-industrial-revolution-ai-technology.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+      <div 
+        ref={backgroundRef} 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: "url('/capitalism-industrial-revolution-ai-technology.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto text-center space-y-8 my-auto">
         <h1
           ref={titleRef}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-balance leading-none tracking-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-balance leading-tight tracking-tight px-4 max-w-5xl mx-auto"
           style={{ fontStyle: "italic" }}
         >
-          <div className="flex flex-col items-center gap-2 sm:gap-4">
-            <span className="text-white/90 drop-shadow-2xl inline-block translate-y-8 sm:translate-y-12">
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-white/90 drop-shadow-2xl">
               CẠNH TRANH VÀ ĐỘC QUYỀN 
             </span>
-            <span className="text-white/90 drop-shadow-2xl inline-block translate-y-4 sm:translate-y-8">
+            <span className="text-white/90 drop-shadow-2xl">
               TRONG NỀN KINH TẾ THỊ TRƯỜNG
             </span>
           </div>
         </h1>
 
-        <div ref={subtitleRef} className="inline-block relative mt-16 mb-12">
+        <div ref={subtitleRef} className="inline-block relative mt-8 mb-6">
           <div
             className="relative border-[6px] border-yellow-500 bg-gradient-to-br from-amber-900/95 to-amber-950/95 backdrop-blur-sm px-12 py-8 md:px-16 md:py-10 shadow-2xl"
             style={{ transform: "skewX(-3deg)" }}
@@ -147,7 +148,7 @@ export function HeroSection() {
           thời đại số
         </p>
 
-        <div ref={buttonsRef} className="flex flex-wrap justify-center gap-4 pt-8">
+        <div ref={buttonsRef} className="flex flex-wrap justify-center gap-4 pt-6">
           <Button
             size="lg"
             className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 hover:shadow-2xl transition-all duration-300 text-lg sm:text-xl px-12 py-8 font-bold rounded-full border-2 border-cyan-300/50 text-white uppercase tracking-wide"
@@ -156,7 +157,7 @@ export function HeroSection() {
           </Button>
         </div>
 
-        <div ref={timelineRef} className="pt-24">
+        <div ref={timelineRef} className="pt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 max-w-5xl mx-auto relative">
             <div className="hidden md:block absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-amber-700 via-red-700 via-red-600 via-blue-600 to-purple-600 opacity-30 rounded-full" />
 
@@ -184,7 +185,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="pt-16">
+        <div className="pt-8">
           <ChevronDown className="w-10 h-10 mx-auto text-white/60 animate-bounce" />
         </div>
       </div>

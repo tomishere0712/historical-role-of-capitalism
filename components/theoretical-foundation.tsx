@@ -20,6 +20,19 @@ const categories = [
     ],
   },
   {
+    id: "historical-role",
+    title: "Vai Trò Lịch Sử",
+    icon: Lightbulb,
+    description: "Từ phong kiến đến xã hội tiến bộ",
+    content:
+      "Vai trò lịch sử của chủ nghĩa tư bản là phá vỡ các mối quan hệ sản xuất cũ (phong kiến) và tạo ra những điều kiện vật chất cho sự phát triển tiếp theo. Tuy nhiên, chủ nghĩa tư bản không phải là điểm cuối cùng của lịch sử - nó chỉ là một giai đoạn trong quá trình phát triển của xã hội.",
+    examples: [
+      "Phong kiến → Tư bản: Tư bản phá vỡ phong kiến, giải phóng lực lượng sản xuất",
+      "Tư bản → Xã hội tiến bộ: Những mâu thuẫn của tư bản sẽ dẫn đến sự phát triển tiếp theo",
+      "Bài học: Hiểu rõ quy luật phát triển lịch sử để định hướng tương lai",
+    ],
+  },
+  {
     id: "modern-examples",
     title: "Ví dụ Hiện đại",
     icon: Globe,
@@ -51,24 +64,11 @@ const categories = [
     icon: Users,
     description: "Làm sao tận dụng thành tựu, tránh bị lệ thuộc",
     content:
-      "Sinh viên thế hệ AI phải học cách tận dụng những thành tựu của tư bản (công nghệ, giáo dục, cơ hội) mà không bị lệ thuộc vào nó. Điều này có nghĩa là phải có ý thức lịch sử, tư duy phản biện, và khát vọng xây dựng một xã hội tiến bộ hơn.",
+      "Sinh viên thế hệ AI cần: (1) Tận dụng thành tựu CNTB - phát triển năng lực lõi (tư duy phê phán, data/AI literacy, phương pháp nghiên cứu, ngoại ngữ); (2) Không trở thành nạn nhân - bảo vệ quyền kỹ thuật số, hiểu hợp đồng lao động, quản trị thời gian số; (3) Hướng tới lý tưởng tiến bộ - học gắn trách nhiệm xã hội, tinh thần công dân toàn cầu.",
     examples: [
-      "Sử dụng AI để học tập và sáng tạo - nhưng không để AI thay thế tư duy của bạn",
-      "Tham gia vào nền kinh tế số - nhưng hiểu rõ những mâu thuẫn và bất công trong nó",
-      "Bài học: Trở thành những người lãnh đạo có ý thức, không phải những người bị dẫn dắt",
-    ],
-  },
-  {
-    id: "historical-role",
-    title: "Vai Trò Lịch Sử",
-    icon: Lightbulb,
-    description: "Từ phong kiến đến xã hội tiến bộ",
-    content:
-      "Vai trò lịch sử của chủ nghĩa tư bản là phá vỡ các mối quan hệ sản xuất cũ (phong kiến) và tạo ra những điều kiện vật chất cho sự phát triển tiếp theo. Tuy nhiên, chủ nghĩa tư bản không phải là điểm cuối cùng của lịch sử - nó chỉ là một giai đoạn trong quá trình phát triển của xã hội.",
-    examples: [
-      "Phong kiến → Tư bản: Tư bản phá vỡ phong kiến, giải phóng lực lượng sản xuất",
-      "Tư bản → Xã hội tiến bộ: Những mâu thuẫn của tư bản sẽ dẫn đến sự phát triển tiếp theo",
-      "Bài học: Hiểu rõ quy luật phát triển lịch sử để định hướng tương lai",
+      "Tận dụng: Xây dựng portfolio dự án, tham gia mã nguồn mở, học qua MOOC, sử dụng AI làm công cụ hỗ trợ",
+      "Phòng ngừa: Bảo mật dữ liệu cá nhân, đa dạng hóa kỹ năng/thu nhập, giảm lệ thuộc thuật toán khuyến nghị",
+      "Định hướng: Chọn nghề vừa có thu nhập vừa đóng góp cộng đồng, ủng hộ đổi mới xã hội và khoa học mở",
     ],
   },
 ]

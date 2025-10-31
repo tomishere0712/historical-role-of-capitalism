@@ -51,7 +51,6 @@ export function Footer() {
               <li>Lịch sử chủ nghĩa tư bản</li>
               <li>Ma trận kết nối</li>
               <li>Trò chuyện với AI</li>
-              <li>Chia sẻ ý kiến cộng đồng</li>
               <li>Kiểm tra kiến thức</li>
             </ul>
           </div>
@@ -62,7 +61,7 @@ export function Footer() {
               <strong>MLN122:</strong> Vai Trò Lịch Sử của Chủ Nghĩa Tư Bản trong Thế Kỷ 21
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              <strong>Nhóm:</strong> AI1804 – D19
+              <strong>Nhóm:</strong> Half2_AI1804 – Group 4
             </p>
             <p className="text-sm text-muted-foreground mt-2">
               <strong>Trường:</strong> FPT University
@@ -89,7 +88,7 @@ export function Footer() {
             © 2025 Vai Trò Lịch Sử của Chủ Nghĩa Tư Bản - Dự Án Học Tập MLN122
           </p>
           <p className="text-xs text-muted-foreground mt-1 text-center">
-            Dự án học tập MLN122 – FPT University | Nhóm AI1804 – D19 | Chủ đề: Vai trò lịch sử của Chủ Nghĩa Tư Bản
+            Dự án học tập MLN122 – FPT University | Half2_AI1804 – Group 4 | Chủ đề: Vai trò lịch sử của Chủ Nghĩa Tư Bản
             trong Thời đại AI
           </p>
         </div>
