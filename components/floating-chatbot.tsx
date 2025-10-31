@@ -18,7 +18,7 @@ export function FloatingChatbot() {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: "1",
+      id: "initial-message",
       role: "assistant",
       content: `Xin chào! Tôi là trợ lý AI chuyên về Kinh tế chính trị Mác - Lênin.
 
@@ -33,6 +33,7 @@ Bạn muốn hỏi về điều gì?`
   ])
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const [messageCounter, setMessageCounter] = useState(0)
   const scrollAreaRef = useRef<HTMLDivElement>(null)
 
   // Auto scroll to bottom khi có message mới
@@ -51,8 +52,9 @@ Bạn muốn hỏi về điều gì?`
     e.preventDefault()
     if (!input.trim() || isLoading) return
 
+    setMessageCounter(prev => prev + 1)
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: `user-${messageCounter}`,
       role: "user",
       content: input.trim(),
     }
@@ -65,8 +67,9 @@ Bạn muốn hỏi về điều gì?`
       // Gọi Groq API thông qua AI service
       const aiResponse = await sendMessageToAI(input.trim(), messages)
       
+      setMessageCounter(prev => prev + 1)
       const assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: `assistant-${messageCounter}`,
         role: "assistant",
         content: aiResponse,
       }
@@ -74,8 +77,9 @@ Bạn muốn hỏi về điều gì?`
       setMessages(prev => [...prev, assistantMessage])
     } catch (error) {
       console.error("Groq Chat error:", error)
+      setMessageCounter(prev => prev + 1)
       const errorMessage: Message = {
-        id: (Date.now() + 2).toString(),
+        id: `error-${messageCounter}`,
         role: "assistant",
         content: "Xin lỗi, tôi gặp lỗi khi xử lý câu hỏi của bạn. Vui lòng thử lại.",
       }
@@ -87,10 +91,11 @@ Bạn muốn hỏi về điều gì?`
 
   const clearChat = () => {
     setMessages([{
-      id: "1",
+      id: "initial-message",
       role: "assistant",
       content: `Chat đã được làm mới! Tôi có thể giúp gì cho bạn về Kinh tế chính trị Mác - Lênin?`
     }])
+    setMessageCounter(0)
   }
 
   return (

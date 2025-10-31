@@ -48,28 +48,48 @@ export function FAQSection() {
   useEffect(() => {
     if (sectionRef.current && titleRef.current && accordionRef.current) {
       const ctx = gsap.context(() => {
-        gsap.from(titleRef.current, {
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: 1,
+        // Animate title - hiển thị ngay khi vào viewport
+        gsap.fromTo(
+          titleRef.current,
+          {
+            opacity: 0,
+            y: 20,
           },
-          opacity: 0,
-          y: 50,
-          scale: 0.9,
-        })
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: titleRef.current,
+              start: "top bottom-=100",
+              once: true,
+            },
+          }
+        )
 
-        gsap.from(accordionRef.current?.querySelectorAll("[data-state]") || [], {
-          scrollTrigger: {
-            trigger: accordionRef.current,
-            start: "top 80%",
-            end: "top 40%",
-            scrub: 1,
-          },
-          opacity: 0,
-          x: -50,
-          stagger: 0.1,
+        // Animate FAQ items - hiển thị ngay khi vào viewport
+        const faqItems = accordionRef.current?.querySelectorAll("[data-state]") || []
+        faqItems.forEach((item, index) => {
+          gsap.fromTo(
+            item,
+            {
+              opacity: 0,
+              x: -20,
+            },
+            {
+              opacity: 1,
+              x: 0,
+              duration: 0.5,
+              delay: index * 0.1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: item,
+                start: "top bottom-=50",
+                once: true,
+              },
+            }
+          )
         })
       }, sectionRef)
 
@@ -88,7 +108,7 @@ export function FAQSection() {
         <div ref={accordionRef}>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionItem key={index} value={faq.question}>
                 
                 <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
                 <AccordionContent className="text-base text-muted-foreground leading-relaxed">

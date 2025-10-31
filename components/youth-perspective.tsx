@@ -68,18 +68,25 @@ export function YouthPerspective() {
       youthPerspectiveBoxRef.current
     ) {
       const ctx = gsap.context(() => {
-        // Animate title
-        gsap.from(titleRef.current, {
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: 1,
+        // Animate title - hiển thị ngay khi vào viewport
+        gsap.fromTo(
+          titleRef.current,
+          {
+            opacity: 0,
+            y: 20,
           },
-          opacity: 0,
-          y: 50,
-          scale: 0.9,
-        })
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: titleRef.current,
+              start: "top bottom-=100",
+              once: true,
+            },
+          }
+        )
 
         // Animate the "Góc nhìn giới trẻ" box to rotate on scroll
         gsap.fromTo(
@@ -97,32 +104,49 @@ export function YouthPerspective() {
           },
         )
 
-        // Animate perspective cards with stagger
-        gsap.from(cardsRef.current?.querySelectorAll(".perspective-card") || [], {
-          scrollTrigger: {
-            trigger: cardsRef.current,
-            start: "top 80%",
-            end: "top 40%",
-            scrub: 1,
-          },
-          opacity: 0,
-          y: 80,
-          stagger: 0.1,
-          ease: "power2.out",
+        // Animate perspective cards with stagger - hiển thị ngay khi vào viewport
+        const cards = cardsRef.current?.querySelectorAll(".perspective-card") || []
+        cards.forEach((card, index) => {
+          gsap.fromTo(
+            card,
+            {
+              opacity: 0,
+              y: 20,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.5,
+              delay: index * 0.1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top bottom-=100",
+                once: true,
+              },
+            }
+          )
         })
 
-        // Animate CTA card with scale effect
-        gsap.from(ctaCardRef.current, {
-          scrollTrigger: {
-            trigger: ctaCardRef.current,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: 1,
+        // Animate CTA card - hiển thị ngay khi vào viewport
+        gsap.fromTo(
+          ctaCardRef.current,
+          {
+            opacity: 0,
+            y: 20,
           },
-          opacity: 0,
-          scale: 0.9,
-          y: 50,
-        })
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: ctaCardRef.current,
+              start: "top bottom-=100",
+              once: true,
+            },
+          }
+        )
 
         if (imageRef.current) {
           gsap.to(imageRef.current, {
